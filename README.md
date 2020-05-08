@@ -87,13 +87,14 @@ Logistic curve equation is **N(d+1) = E * P * N(d)** where ...</br>
 and we can see the logistic curve depends mostly on the **E** and **P** which together they represent the **infection rate**, in the begining of the infection the **P** is high becuase (1- (1 / 98 420 000) )  = 0.9999</br>
 We can run something like a simulation by adjusting the **E** and **P**.
 
-So by starting from the current dat and by saying that the average number of people someone infected is exposed to every day is 7 we find that the number of cases on May 25 is about **25,000 cases**
+So by starting from the current dat and by saying that the average number of people someone infected is exposed to every day is 7 we find that the number of confirmed cases on May 25 is about **25,000 cases**
+and if it's 4 because of the quarntine the number is about **15,000*
 
 ![fig](/images/25-5-2020/confirmed_infection_rate.png)
 
 
 But by starting from the begining of the infection and by saying that the average number of people someone infected is exposed to each day is 7 before the quarntine and 2 after the quarntine.
-The number of confirmed cases on May 25 is about **150,000 cases**
+The number of Actual cases on May 25 is about **150,000 cases**
 
 
 ![fig](/images/25-5-2020/confirmed_infection_rate_from_start.png)
