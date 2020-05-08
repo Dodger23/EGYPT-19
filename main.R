@@ -12,13 +12,14 @@ library(reshape2)
 library(minpack.lm)
 library(plotly)
 library(lubridate)
+library(dplyr)
 
 options(scipen = 999)
 
 
 getData <- function(item)
 {
-  library(dplyr)
+
   link = paste(
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_" ,
     item ,
@@ -151,7 +152,6 @@ model = function(data , countryName , date , type)
 }
 
 
-
 sumulated_from_current = function (df , date , type)
 {
   
@@ -216,7 +216,6 @@ sumulated_from_current = function (df , date , type)
   dev.off()
   
 }
-
 
 
 simulated_from_patient0 = function (data , date , type)
@@ -308,10 +307,6 @@ simulated_from_patient0 = function (data , date , type)
 confirmed_cases = getData("confirmed")
 death_cases = getData("deaths")
 recovered_cases = getData("recovered")
-
-#data = read.csv("Data/Egypt_confirmed_cases.csv")
-#names(data)[2:ncol(data)] = sub('X' , '' , names(data)[2:ncol(data)])
-#names(data)[2:ncol(data)] = as.Date(names(data)[2:ncol(data)] , "%Y.%m.%d")
 
 model(confirmed_cases , "Egypt" , "25-5-2020" , "recovered_cases")
 model(death_cases , "Egypt" , "25-5" , "deaths_cases")
