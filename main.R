@@ -304,15 +304,20 @@ simulated_from_patient0 = function (data , date , type)
 
 
 
-confirmed_cases = getData("confirmed")
-death_cases = getData("deaths")
-recovered_cases = getData("recovered")
+#confirmed_cases = getData("confirmed")
+#death_cases = getData("deaths")
+#recovered_cases = getData("recovered")
 
-model(confirmed_cases , "Egypt" , "25-5-2020" , "recovered_cases")
-model(death_cases , "Egypt" , "25-5" , "deaths_cases")
-model(recovered_cases , "Egypt" , "25-5" , "deaths_cases")
+#model(confirmed_cases , "Egypt" , "25-5-2020" , "recovered_cases")
+#model(death_cases , "Egypt" , "25-5" , "deaths_cases")
+#model(recovered_cases , "Egypt" , "25-5" , "deaths_cases")
 
+data = read.csv("Data/Egypt_confirmed_cases.csv")
+names(data)[2:ncol(data)] = sub('X' , '' , names(data)[2:ncol(data)])
+names(data)[2:ncol(data)] = as.character(as.Date(names(data)[2:ncol(data)] , "%Y.%m.%d"))
 
-sumulated_from_current(cleanData(confirmed_cases) , "25-5-2020" , "confirmed" )
-simulated_from_patient0(cleanData(confirmed_cases) , "25-5-2020" , "confirmed")
+names(data)[ncol(data)]
+
+#sumulated_from_current(cleanData(confirmed_cases) , "25-5-2020" , "confirmed" )
+#simulated_from_patient0(cleanData(confirmed_cases) , "25-5-2020" , "confirmed")
 
