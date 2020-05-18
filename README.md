@@ -99,6 +99,8 @@ The number of Actual cases on May 25 is about **150,000 cases**
 
 ![fig](/images/25-5-2020/confirmed_infection_rate_from_start.png)
 
+You might wonder where is this huge number?
+Well, by subtracting the predicted confirmed cases on May 25 which is 21,000, the rest "130,000" should be people who got infected and recovered without the need to go to the hospital, and people who got infected and died without knowing they had the virus.
 
 
 
